@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Pas de Nom</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+
+<body id="grid">
+    <p id="info">Utilisez les flèches pour vous deplacer et la touche entrée pour selectionner dans le menu.</p>
+    <p id="erreur">La fenêtre est trop petite pour afficher le jeu</p>
+    <div id="jeu"><canvas id="myCanvas" width="800" height="400"></canvas><script defer type="text/javascript" src="jeu.js"></script></div>
+
+    <div id="boutons">
+        <button class="key" style="background-color: #C0392B" onClick="user(1)" accesskey="r">Rouge</button>
+        <button class="key" style="background-color: #2980B9" onClick="user(2)" accesskey="b">Bleu</button>
+        <button class="key" style="background-color: #2ECC71" onClick="user(3)" accesskey="g">Vert</button>
+        <button class="key" style="background-color: #F1C40F" onClick="user(4)" accesskey="y">Jaune</button>
+        <button class="key" style="background-color: #8E44AD" onClick="user(5)" accesskey="m">Magenta</button>
+    </div>
+
+    <div id="boutoncontinuer">
+        <button class="choix" style="background-color: #ffffff" onClick="continuerniveau()">Niveau suivant</button>
+    </div>
+
+    <div id="boutonretour">
+        <button class="choix" style="background-color: #ffffff" onClick="retourmenu()">Retour au menu</button>
+    </div>
+    
+    <div id="explications">
+    <image id="imgexpli" src="explications.gif"></image>
+    <p id="expli">Lorsqu'une partie est lancée, un cadrillage de 600 zones de couleurs differentes sont générés aléatoirement, les zones marquées d'un carré blanc vous appartiennent. Vous pouvez changer la couleur de vos zones avec les boutons de couleurs. Les zones adjacentes et de même couleur que celles qui vous appartiennent deviennent votre. Le but est de vous aproprier la totalité du quadrilage en un nombre de changement de couleur impartie selon le niveau.</p>
+    </div>
+
+    <div id="menu">
+        <button class="choix" style="background-color: #ffffff" onClick="choixmenu(1)" >▲</button>
+        <button class="choix" style="background-color: #ffffff" onClick="choixmenu(3)" >Entrée</button>
+        <button class="choix" style="background-color: #ffffff" onClick="choixmenu(2)" >▼</button>
+    </div>
+
+</body>
+</html>
